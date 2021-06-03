@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bijan Mazaheri - {% block title %}{% endblock %}</title>
+        <link href="static/jemdoc.css" rel="stylesheet" media="screen">
+        <meta name="author" content="Bijan Mazaheri">
+        <meta name="description" content="Homepage for Bijan Mazaheri, graduate student at California Institute of Technology (Caltech). Also contains cross country rankings.">
+        {% block html_head %}{% endblock %}
+    </head>
+    <body>
+    <table summary="Table for page layout." id="tlayout">
+        <tr valign="top">
+            <td id="layout-menu">
+                <div class="menu-category">Menu</div>
+                <div class="menu-item"><a href="/" >Home</a></div>
+                <div class="menu-item"><a href="xcrank">Cross Country&nbsp;Rankings</a></div>
+                <div class="menu-category">Links</div>
+                <div class="menu-item"><a href="https://scholar.google.com/citations?user=DXEdM48AAAAJ&hl=en" >Google&nbsp;Scholar</a></div>
+                <div class="menu-item"><a href="https://twitter.com/honey_bijan" >Twitter</a></div>
+                <div class="menu-item"><a href="https://www.instagram.com/honey_bijan/">Instagram</a></div>
+                <div class="menu-item"><a href="https://www.strava.com/athletes/19477841" >Strava</a></div>
+            </td>
+            <td id="layout-content">
+                {% block content %}{% endblock %}
+            </td>
+        </tr>
+    </table>
+    <div id="footer">
+    {% block footer %}
+    &copy; Copyright 2021 by <a href="www.bijanmazaheri.com">Bijan Mazaheri</a>.
+    {% endblock %}
+  </div> 
+    </body>
+</html>
